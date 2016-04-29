@@ -1,0 +1,55 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+   
+}
+
+#input_item{
+	width: 1000px;
+	margin-right: 10px;
+	box-shadow: 10px 10px 5px #a8a8a8;
+	margin-bottom: 40px;
+}
+
+#btn_todo{
+   background: #E5E5E5;
+   z-index: 3;
+   box-shadow: 3;
+   color: black;
+   height: 40px;
+   margin-bottom: 10px;
+   border-radius: 5px;
+   border-style: solid;
+   border-color: #a8a8a8;
+}
+
+#edit_item{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+#edit_item_btn{
+	width: 40px;
+	margin-right: 20px;
+}
+
+#item_close_btn{
+	width: 40px;
+	margin-right: 20px;
+	
+}
+
+.alert{
+	background: #E5E5E5;
+	border-radius: 20px;
+}
+
+
+.btn-sm{
+	border-style: solid;
+   border-color: #a8a8a8;
+}
+
+#final_list{
+	width: 1000px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
