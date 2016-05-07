@@ -2,6 +2,9 @@
 <%@ page import="java.lang.*"%>
 <%@ page import="twitter4j.*"%>
 <%@ page import="javax.servlet.*"%>
+<%@ page import="net.webservicex.GeoIP"%>
+<%@ page import="net.webservicex.GeoIPService"%>
+<%@ page import="net.webservicex.GeoIPServiceSoap"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -43,6 +46,15 @@
 				<button type="submit" class="btn btn-primary" style="width:100px;border-radius:50px;"><i class="fa fa-twitter fa-3x"></i> </button>
 				</div>
 		</form>
+		<br><br>
+		<%
+		String ip = request.getRemoteAddr();
+		GeoIPService service = new GeoIPService();
+		GeoIPServiceSoap port = service.getGeoIPServiceSoap();
+		GeoIP country = port.getGeoIP(ip);
+		%>
+		
+		<label><span style="color:red">Your Country:</span><%=country.getCountryName()%></label>
 	</div>
 </body>
 </html>
